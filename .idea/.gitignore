@@ -1,0 +1,29 @@
+# IntelliJ IDEA project files
+.idea/
+*.iml
+*.iws
+
+# Your specified ignored files
+/shelf/
+/workspace.xml
+/mavenHomeManager.xml
+
+# Maven build output
+/target/
+
+# Logs
+*.log
+
+# OS-specific files
+.DS_Store      # macOS Finder metadata
+Thumbs.db      # Windows Explorer metadata
+
+# Temporary files
+*.tmp
+*.swp
+
+# Java specific
+*.class
+
+# Generated files
+/out/

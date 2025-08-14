@@ -1,0 +1,30 @@
+syntax = "proto3";
+
+package example;
+
+option java_multiple_files = true;
+option java_package = "com.example.grpc";
+option java_outer_classname = "JobProto";
+
+message Request {
+    string job_id = 1;
+
+}
+
+message Result {
+    string message = 1;
+}
+
+message FinalResponse {
+    string summary = 1;
+}
+
+// Service for Client -> Server (Unary)
+service Service {
+    rpc ProcessJob(Request) returns (FinalResponse);
+}
+
+// Service for Server -> Executor (Server Streaming)
+service ExecutorService {
+    rpc ExecuteStream(Request) returns (stream Result);
+}
